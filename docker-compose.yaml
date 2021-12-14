@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    command: python main.py
+    working_dir: app/
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/app
+
+#docker-compose.yaml
+#docker-compose up -d -> uruchamianie/przebudowywanie kontenerów
+#docker-compose up -d --build -> uruchamianie/przebudowywanie kontenerów z przebudowaniem obrazu
+#docker-compose ps -> sprawdzanie stanu kontenrów
+#docker-compose exec app /bin/sh -> wchodzenie do kontenera
+#instalacja pakietów na podstawie pliku requirements.txt pip install -r requirements.txt
+#pip install -r requirements.txt && python main.py
+
+
+
+
+
+
+
+
+
