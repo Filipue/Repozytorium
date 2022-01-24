@@ -9,12 +9,12 @@ hog.setSVMDetector(cv.HOGDescriptor_getDefaultPeopleDetector())
 
 def read_data():
     data_format = [".jpg"]
-    path = 'Photos/'
-    for (path, dirs, data) in o.walk(path):
+    track = 'Photos/'
+    for (track, dirs, data) in o.walk(track):
         for photo in data:
             if photo.endswith(tuple(data_format)):
                 print(photo)
-                photo = path + photo
+                photo = track + photo
                 detection(photo)
 
 
