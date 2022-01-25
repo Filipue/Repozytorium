@@ -26,7 +26,6 @@ def detection(photo: str):
     register = 1
     for (x, y, w, h) in regions:
         cv.rectangle(photo, (x, y), (x + w, y + h), (0, 0, 255), 2)
-        cv.putText(photo, f'person {register}', (x, y), cv.FONT_HERSHEY_TRIPLEX, 0.5, (0, 0, 255), 2)
         register += 1
 
     print(f'On the image are {register-1} human`s')
